@@ -17,4 +17,6 @@
 3) Add this in your server.cfg :
 ``start esx_duty``
 
+
+[EXTRA'S]
 Credit to Calle - @qalle-fivem
