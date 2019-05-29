@@ -6,4 +6,5 @@ Locales['en'] = {
 	['notpol'] = 'You are not a police officer.',
 	['notamb'] = 'You are not a doctor.',
 	['notmech'] = 'You are not a mechanic.',
+	['nottaxi'] = 'You are not a taxi driver.',
 }
