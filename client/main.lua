@@ -59,6 +59,11 @@ AddEventHandler('esx_duty:hasEnteredMarker', function (zone)
     CurrentActionMsg  = _U('duty')
     CurrentActionData = {}
   end
+  if zone == 'TaxiDuty' then
+    CurrentAction     = 'taxi_duty'
+    CurrentActionMsg  = _U('duty')
+    CurrentActionData = {}
+  end
 end)
 
 AddEventHandler('esx_duty:hasExitedMarker', function (zone)
@@ -123,6 +128,22 @@ Citizen.CreateThread(function ()
           end
         else
           sendNotification(_U('notmech'), 'error', 5000)
+          Wait(1000)
+          end
+        end
+		
+        if CurrentAction == 'taxi_duty' then
+          if PlayerData.job.name == 'taxi' or PlayerData.job.name == 'offtaxi' then
+            TriggerServerEvent('duty:taxi')
+          if PlayerData.job.name == 'taxi' then
+            sendNotification(_U('offduty'), 'success', 2500)
+            Wait(1000)
+          else
+            sendNotification(_U('onduty'), 'success', 2500)
+            Wait(1000)
+          end
+        else
+          sendNotification(_U('nottaxi'), 'error', 5000)
           Wait(1000)
           end
         end
