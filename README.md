@@ -6,6 +6,7 @@
   * esx_policejob => https://github.com/ESX-Org/esx_policejob
   * esx_ambulancejob => https://github.com/ESX-Org/esx_ambulancejob
   * esx_mechanicjob => https://github.com/ESX-Org/esx_mechanicjob
+  * esx_taxijob => https://github.com/ESX-Org/esx_taxijob
   * pNotify => https://github.com/Nick78111/pNotify
   
 [INSTALLATION]
